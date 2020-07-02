@@ -1,0 +1,21 @@
+
+<div class="formStyle">
+
+
+<form [formGroup] = "AddStudent" (ngSubmit) = "onSubmit()" style="width: 50%;">
+    
+    <div>
+        <input type="name" id="name" class="form-control" value="" placeholder="Student Name"
+        formControlName = "name">
+        <input type="text" id="url" class="form-control" value="" placeholder="Student Register Number"
+        formControlName = "rollno">
+        <input type="text" id="source" class="form-control" value="" placeholder=" Standard"
+        formControlName = "class">
+        <input type="text" id="ingredients" class="form-control" value=""
+        placeholder="Enter picture url" formControlName = "picture">
+    </div>
+    <div>
+        <button type="submit" class=" btn btn-success"  [disabled] = '!AddStudent.valid'  >Add</button>
+    </div>          
+</form>
+</div>

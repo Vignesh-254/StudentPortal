@@ -1,0 +1,19 @@
+.student-list{
+    display: flex;
+    margin:10px 0px;
+}
+
+.student-image{
+    width: 80%;
+    height: 200px;
+}
+
+.grid-view{
+    margin:0px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.student-grid{
+    width: 30%;
+}

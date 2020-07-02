@@ -1,0 +1,17 @@
+<div class="header">
+    <div class="app-name">
+        <h4>Student Portal</h4>
+    </div>
+    <div class="options">
+        <div class='listtogrid' role="button" (click) = "viewChanges()">
+            <a>
+            <i class="fas fa-list" *ngIf = "grid"></i></a>
+            <i class="fa fa-bars" *ngIf = "!grid"></i>
+        </div>
+
+        <button class="btn btn-primary" (click) = "addNewStudent()" >Add new Student</button>
+    </div>
+</div>
+
+
+  

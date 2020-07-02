@@ -1,0 +1,15 @@
+.recipe-image{
+    height:auto;
+    width: 100%;
+    max-width:100%;
+    max-height: 100%;
+    object-fit: fill;
+}
+button{
+    padding-left: 10px ;
+    padding-right: 10px;
+    margin:0px 10px;
+}
+.recipe-detail{
+    padding:20px;
+}

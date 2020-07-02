@@ -1,0 +1,28 @@
+<div >
+
+
+    <div *ngIf = "view">
+        <div class="row">
+            <div class="col-sm-4">
+                <a *ngFor = "let item of items">
+                    <p class="btn btn-primary student-list" (click)="studentDescription(item)" routerLink = "student-detail">{{item.name}}</p>
+                    
+                </a>
+            </div> 
+    </div>
+    </div>
+    <div *ngIf="!view"> 
+    
+        <div class="grid-view">
+            
+            <div class="student-grid shadow p-3 mb-5 bg-white rounded" routerLink = "student-detail" (click)="studentDescription(item)" *ngFor = "let item of items" >
+                <img src="{{item.url}}" alt="" class="student-image" >
+                <p>{{item.name}}</p>
+                <p>{{item.Ingredients}}</p>
+            </div>
+        </div>
+    
+    </div>
+
+</div>
+    
