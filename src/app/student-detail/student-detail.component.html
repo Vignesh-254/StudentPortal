@@ -14,7 +14,9 @@
                     <h3>{{value.dept}}</h3>
                     <h3>{{value.rollno}}</h3>
                     <div>
+                        <button class="btn btn-primary" (click)="editItem(value)">Edit</button>
                         <button class="btn btn-warning" (click)="deleteItem(value)">Delete</button>
+                        <button type="submit" class=" btn btn-priamry" (click) = "onCancel()"   >Cancel</button>
                     </div>
                     <div>
                         <ul *ngFor = "let no of value.Ingredients">

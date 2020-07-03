@@ -1,0 +1,11 @@
+.edit{
+    display: flex;
+    justify-content: space-between;
+}
+.recipe-image{
+    max-width:350px;
+    
+}
+input{
+    margin: 10px 0px;
+}

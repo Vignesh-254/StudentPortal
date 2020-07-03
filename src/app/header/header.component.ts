@@ -36,4 +36,7 @@ export class HeaderComponent implements OnInit {
     console.log(this.AddStudent.value)
 
   }
+  displayList(){
+    this.route.navigate(['students-list']);
+  }
 }

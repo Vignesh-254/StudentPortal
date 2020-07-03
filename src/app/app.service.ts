@@ -30,7 +30,25 @@ export class AppDataService {
         "dept": "Computer Science",
         "url":"https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         "id": 3
-      }
+      },{
+        "name": "Vignesh",
+        "rollno": "16P204",
+        "dept": "Information Technology",
+        "url":"https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "id": 1
+      },{
+        "name": "Vicky",
+        "rollno": "16P253",
+        "dept": "Information Technology ",
+        "url":"https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "id": 1
+      },{
+        "name": "Vignesh P",
+        "rollno": "16P200",
+        "dept": "Information Technology",
+        "url":"https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "id": 1
+      },
     ]
   items:BehaviorSubject<any> = new BehaviorSubject(this.students);
   
@@ -80,5 +98,27 @@ export class AppDataService {
     console.log(val)
     this.items.next(val)
 
+  }
+  getEditStudent(){
+    return this.edit
+  }
+  setEditStudent(event){
+    console.log(event)
+    this.edit = event
+  }
+  editStudent(result){
+    console.log("result",result)
+     const val = this.items.value
+     console.log("items",val)
+    let i;
+    for (let index = 0; index < val.length; index++) {
+      if(val[index].id == result.id){
+           console.log(result.id,val[index].id)
+            i = index +1;
+      }
+    }
+    val.splice(i-1,1,result)
+    this.items.next(val)
+    
   }
 }

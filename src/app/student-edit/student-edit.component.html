@@ -1,0 +1,27 @@
+
+<div class="modal-body edit">
+    <div class="image-cls col-md-6">
+        <img class = " student-image" src="{{this.edit.url}}" alt="">
+    </div>
+    <div class="col-md-6" style="width: 45%;">
+        <form [formGroup] = "EditStudent" (ngSubmit) = "onSubmit()">
+           <input type="name" id="name" class="form-control" value="" placeholder="student name"
+            formControlName = "name">
+
+            <input type="text" id="rollno" class="form-control" value="" placeholder="student register number"
+            formControlName = "rollno">
+
+            <input type="text" id="class" class="form-control" value="" placeholder=" student class"
+            formControlName = "dept">
+
+            <input type="text" id="picture" class="form-control" value=""
+            placeholder="student picture" formControlName = "url">
+
+            <div style="display: flex;">
+                <button type="submit" class=" btn btn-success"  >Save</button>
+                <button type="submit" class=" btn btn-priamry" (click) = "onCancel()"   >Cancel</button>
+            </div>
+        
+        </form>             
+    </div>
+</div>

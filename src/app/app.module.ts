@@ -9,6 +9,10 @@ import { NewStudentComponent } from './new-student/new-student.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StudentComponent } from './student/student.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
+import { CommonServiceService } from './common-service.service';
+import { StudentEditComponent } from './student-edit/student-edit.component';
+import { StudentListComponent } from './student-list/student-list.component';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -18,14 +22,18 @@ import { StudentDetailComponent } from './student-detail/student-detail.componen
     NewStudentComponent,
     StudentComponent,
     StudentDetailComponent,
+    StudentEditComponent,
+    StudentListComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     NgbModule,
+    MatSliderModule,
   ],
-  providers: [],
+  providers: [CommonServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
